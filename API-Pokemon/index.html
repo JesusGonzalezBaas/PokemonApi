@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Pokémon</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url("pokemon.jpg"); /* Ruta relativa a la ubicación del archivo HTML */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed; /* Para que la imagen de fondo se mantenga fija */
+        }
+        .container {
+            max-width: 500px;
+            padding-top: 100px; /* Añadido para centrar el contenido en dispositivos grandes */
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .card-body {
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.7); /* Cambia el color de fondo del contenedor con más transparencia */
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+            background-color: rgba(255, 255, 255, 0.5); /* Ajusta la transparencia del fondo del formulario */
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-body">
+                <h1 class="card-title text-center mb-4">Busca al Pokémon</h1>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="pokemonName" placeholder="Escribe el nombre del Pokémon">
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="fetchPokemon()">Encontrar</button>
+                </div>
+                <div id="pokemonInfo" class="mt-4"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
